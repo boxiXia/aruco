@@ -36,7 +36,8 @@ set_target_properties(${LIBNAME} PROPERTIES          # create *nix style library
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_SOVERSION}
     CLEAN_DIRECT_OUTPUT 1                       # allow creating static and shared libs without conflicts
-    OUTPUT_NAME "${LIBNAME}${PROJECT_DLLVERSION}"    # avoid conflicts between library and binary target names
+    # OUTPUT_NAME "${LIBNAME}${PROJECT_DLLVERSION}"    # avoid conflicts between library and binary target names
+    OUTPUT_NAME "${LIBNAME}"
 )
 
 target_link_libraries(${LIBNAME} PUBLIC opencv_core)
