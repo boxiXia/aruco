@@ -1,0 +1,6 @@
+Source: aruco
+Version: 3.1.12
+Homepage: https://www.uco.es/investiga/grupos/ava/node/26
+Description: a minimal library for Augmented Reality applications based on OpenCV
+Build-Depends: opencv, eigen3
+### to build: vcpkg install aruco:x64-windows --head
