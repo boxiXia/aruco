@@ -110,7 +110,7 @@ or implied, of Rafael Muñoz Salinas.
             cv::imshow(_wname,_imshow);
             k=cv::waitKey(waitKeyTime);
             isUsedKey=true;
-            if (k!=255) std::cout<<k<<std::endl;
+            //if (k!=255) std::cout<<k<<std::endl;
             bool update=false,create=false;
             //change mode
             if (k=='m'){
@@ -269,14 +269,14 @@ void sgl_OpenCV_Viewer::printHelp(){
 
     //print help commands
     if(!showingHelp)
-            cv::putText(_imshow, "'h' showhelp", cv::Point(30,20), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5, cv::Scalar(200,200,250), 1);
+            cv::putText(_imshow, "'h' showhelp", cv::Point(30,20), cv::FONT_HERSHEY_COMPLEX_SMALL, 1, cv::Scalar(200,200,250), 1);
     else{
-        cv::putText(_imshow, "'h' hide help", cv::Point(30,20), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5, cv::Scalar(200,200,250), 1);
-        cv::putText(_imshow, "'s' start/stop video", cv::Point(30,40), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5, cv::Scalar(200,200,250), 1);
-        cv::putText(_imshow, "'m' change view mode", cv::Point(30,60), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5, cv::Scalar(200,200,250), 1);
-        cv::putText(_imshow, "'MOUSE[+SHIFT|CTRL]' change view", cv::Point(30,80), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5, cv::Scalar(200,200,250), 1);
-        cv::putText(_imshow, "'n' show/hide marker numbers", cv::Point(30,100), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5, cv::Scalar(200,200,250), 1);
-        cv::putText(_imshow, "'c' camera mode on/off", cv::Point(30,120), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.5, cv::Scalar(200,200,250), 1);
+        cv::putText(_imshow, "'h' hide help", cv::Point(30,20), cv::FONT_HERSHEY_COMPLEX_SMALL, 1, cv::Scalar(200,200,250), 1);
+        cv::putText(_imshow, "'s' start/stop video", cv::Point(30,40), cv::FONT_HERSHEY_COMPLEX_SMALL,1, cv::Scalar(200,200,250), 1);
+        cv::putText(_imshow, "'m' change view mode", cv::Point(30,60), cv::FONT_HERSHEY_COMPLEX_SMALL, 1, cv::Scalar(200,200,250), 1);
+        cv::putText(_imshow, "'MOUSE[+SHIFT|CTRL]' change view", cv::Point(30,80), cv::FONT_HERSHEY_COMPLEX_SMALL, 1, cv::Scalar(200,200,250), 1);
+        cv::putText(_imshow, "'n' show/hide marker numbers", cv::Point(30,100), cv::FONT_HERSHEY_COMPLEX_SMALL, 1, cv::Scalar(200,200,250), 1);
+        cv::putText(_imshow, "'c' camera mode on/off", cv::Point(30,120), cv::FONT_HERSHEY_COMPLEX_SMALL, 1, cv::Scalar(200,200,250), 1);
 
     }
 }

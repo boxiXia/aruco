@@ -504,7 +504,7 @@ namespace aruco
         }
     }
     std::ostream &operator<<(std::ostream &str,const CameraParameters&cp){
-        str<<"%YAML:1.0"<<endl<<"---"<<endl;
+        str<<"%YAML 1.0"<<endl<<"---"<<endl;
         str<<"image_width:"<<cp.CamSize.width<<endl;
         str<<"image_height:"<<cp.CamSize.height<<endl;
         str<<"camera_matrix: !!opencv-matrix"<<endl;
@@ -565,7 +565,7 @@ namespace aruco
         cp.Distorsion.setTo(cv::Scalar::all(0));
         string line;
         std::getline(str,line);
-        if (line.find("%YAML:1.0")==string::npos){
+        if (line.find("%YAML 1.0")==string::npos){
             std::cerr<<"Invalid input stream"<<std::endl;
             return str;
         }
